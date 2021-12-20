@@ -1,0 +1,12 @@
+C:\PPAppFolder\SmartSearch\Smart\Smart.Data\bin\Debug\net5.0\Smart.Objects.deps.json
+C:\PPAppFolder\SmartSearch\Smart\Smart.Data\bin\Debug\net5.0\Smart.Objects.dll
+C:\PPAppFolder\SmartSearch\Smart\Smart.Data\bin\Debug\net5.0\ref\Smart.Objects.dll
+C:\PPAppFolder\SmartSearch\Smart\Smart.Data\bin\Debug\net5.0\Smart.Objects.pdb
+C:\PPAppFolder\SmartSearch\Smart\Smart.Data\obj\Debug\net5.0\Smart.Objects.GeneratedMSBuildEditorConfig.editorconfig
+C:\PPAppFolder\SmartSearch\Smart\Smart.Data\obj\Debug\net5.0\Smart.Objects.AssemblyInfoInputs.cache
+C:\PPAppFolder\SmartSearch\Smart\Smart.Data\obj\Debug\net5.0\Smart.Objects.AssemblyInfo.cs
+C:\PPAppFolder\SmartSearch\Smart\Smart.Data\obj\Debug\net5.0\Smart.Objects.csproj.CoreCompileInputs.cache
+C:\PPAppFolder\SmartSearch\Smart\Smart.Data\obj\Debug\net5.0\Smart.Objects.dll
+C:\PPAppFolder\SmartSearch\Smart\Smart.Data\obj\Debug\net5.0\ref\Smart.Objects.dll
+C:\PPAppFolder\SmartSearch\Smart\Smart.Data\obj\Debug\net5.0\Smart.Objects.pdb
+C:\PPAppFolder\SmartSearch\Smart\Smart.Data\obj\Debug\net5.0\Smart.Objects.csprojAssemblyReference.cache

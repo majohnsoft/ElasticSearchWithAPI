@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\abuchi.madumere\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\abuchi.madumere\\.nuget\\packages"
+    ]
+  }
+}

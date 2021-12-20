@@ -1,0 +1,34 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <OutputType>Exe</OutputType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="ManagementJson.txt" />
+    <None Remove="PropertieJson.json" />
+    <None Remove="PropertieJson.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="ManagementJson.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PropertieJson.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETCore.App" Version="2.2.8" />
+    <PackageReference Include="NEST" Version="7.1.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Smart.Business\Smart.Business.csproj" />
+    <ProjectReference Include="..\Smart.Data\Smart.Objects.csproj" />
+  </ItemGroup>
+
+</Project>
