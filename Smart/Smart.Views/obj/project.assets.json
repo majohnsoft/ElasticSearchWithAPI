@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\PPAppFolder\\SmartSearch\\Smart\\Smart.Views\\Smart.Web.csproj",
+      "projectUniqueName": "C:\\PPAppFolder\\SmartApartmentDataAssessment\\Smart\\Smart.Views\\Smart.Web.csproj",
       "projectName": "Smart.Web",
-      "projectPath": "C:\\PPAppFolder\\SmartSearch\\Smart\\Smart.Views\\Smart.Web.csproj",
+      "projectPath": "C:\\PPAppFolder\\SmartApartmentDataAssessment\\Smart\\Smart.Views\\Smart.Web.csproj",
       "packagesPath": "C:\\Users\\abuchi.madumere\\.nuget\\packages\\",
-      "outputPath": "C:\\PPAppFolder\\SmartSearch\\Smart\\Smart.Views\\obj\\",
+      "outputPath": "C:\\PPAppFolder\\SmartApartmentDataAssessment\\Smart\\Smart.Views\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\abuchi.madumere\\AppData\\Roaming\\NuGet\\NuGet.Config",

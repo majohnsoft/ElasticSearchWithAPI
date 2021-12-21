@@ -10,6 +10,7 @@ using Microsoft.OpenApi.Models;
 using Nest;
 using Smart.Business.Implementation;
 using Smart.Business.Interface;
+using Smart.Business.utility;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -48,10 +49,15 @@ namespace Smart.API
                                             .AllowAnyMethod();
                     });
             });
+            services.AddMvc(
+                config =>
+                {
+                    config.Filters.Add(typeof(CustomExceptionHandler));
+                }
+            );
+
             services.AddSwaggerGen(swagger =>
             {
-                //This is to generate the Default UI of Swagger Documentation  
-                //setup.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo { Title = "MNO Validation", Version = "v1" });
                 swagger.SwaggerDoc("v1", new OpenApiInfo
                 {
                     Version = "v1",
@@ -69,6 +75,7 @@ namespace Smart.API
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Smart Apartment Data API"));
+                //app.UseExceptionHandler(logger);
             }
 
             app.UseHttpsRedirection();

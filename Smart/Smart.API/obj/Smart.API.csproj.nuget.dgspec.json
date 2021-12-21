@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\PPAppFolder\\SmartSearch\\Smart\\Smart.API\\Smart.API.csproj": {}
+    "C:\\PPAppFolder\\SmartApartmentDataAssessment\\Smart\\Smart.API\\Smart.API.csproj": {}
   },
   "projects": {
-    "C:\\PPAppFolder\\SmartSearch\\Smart\\Smart.API\\Smart.API.csproj": {
+    "C:\\PPAppFolder\\SmartApartmentDataAssessment\\Smart\\Smart.API\\Smart.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\PPAppFolder\\SmartSearch\\Smart\\Smart.API\\Smart.API.csproj",
+        "projectUniqueName": "C:\\PPAppFolder\\SmartApartmentDataAssessment\\Smart\\Smart.API\\Smart.API.csproj",
         "projectName": "Smart.API",
-        "projectPath": "C:\\PPAppFolder\\SmartSearch\\Smart\\Smart.API\\Smart.API.csproj",
+        "projectPath": "C:\\PPAppFolder\\SmartApartmentDataAssessment\\Smart\\Smart.API\\Smart.API.csproj",
         "packagesPath": "C:\\Users\\abuchi.madumere\\.nuget\\packages\\",
-        "outputPath": "C:\\PPAppFolder\\SmartSearch\\Smart\\Smart.API\\obj\\",
+        "outputPath": "C:\\PPAppFolder\\SmartApartmentDataAssessment\\Smart\\Smart.API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\abuchi.madumere\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,11 +28,11 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\PPAppFolder\\SmartSearch\\Smart\\Smart.Business\\Smart.Business.csproj": {
-                "projectPath": "C:\\PPAppFolder\\SmartSearch\\Smart\\Smart.Business\\Smart.Business.csproj"
+              "C:\\PPAppFolder\\SmartApartmentDataAssessment\\Smart\\Smart.Business\\Smart.Business.csproj": {
+                "projectPath": "C:\\PPAppFolder\\SmartApartmentDataAssessment\\Smart\\Smart.Business\\Smart.Business.csproj"
               },
-              "C:\\PPAppFolder\\SmartSearch\\Smart\\Smart.Data\\Smart.Objects.csproj": {
-                "projectPath": "C:\\PPAppFolder\\SmartSearch\\Smart\\Smart.Data\\Smart.Objects.csproj"
+              "C:\\PPAppFolder\\SmartApartmentDataAssessment\\Smart\\Smart.Data\\Smart.Objects.csproj": {
+                "projectPath": "C:\\PPAppFolder\\SmartApartmentDataAssessment\\Smart\\Smart.Data\\Smart.Objects.csproj"
               }
             }
           }
@@ -54,6 +54,10 @@
             "NEST": {
               "target": "Package",
               "version": "[7.1.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
@@ -90,14 +94,14 @@
         }
       }
     },
-    "C:\\PPAppFolder\\SmartSearch\\Smart\\Smart.Business\\Smart.Business.csproj": {
+    "C:\\PPAppFolder\\SmartApartmentDataAssessment\\Smart\\Smart.Business\\Smart.Business.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\PPAppFolder\\SmartSearch\\Smart\\Smart.Business\\Smart.Business.csproj",
+        "projectUniqueName": "C:\\PPAppFolder\\SmartApartmentDataAssessment\\Smart\\Smart.Business\\Smart.Business.csproj",
         "projectName": "Smart.Business",
-        "projectPath": "C:\\PPAppFolder\\SmartSearch\\Smart\\Smart.Business\\Smart.Business.csproj",
+        "projectPath": "C:\\PPAppFolder\\SmartApartmentDataAssessment\\Smart\\Smart.Business\\Smart.Business.csproj",
         "packagesPath": "C:\\Users\\abuchi.madumere\\.nuget\\packages\\",
-        "outputPath": "C:\\PPAppFolder\\SmartSearch\\Smart\\Smart.Business\\obj\\",
+        "outputPath": "C:\\PPAppFolder\\SmartApartmentDataAssessment\\Smart\\Smart.Business\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\abuchi.madumere\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -114,8 +118,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\PPAppFolder\\SmartSearch\\Smart\\Smart.Data\\Smart.Objects.csproj": {
-                "projectPath": "C:\\PPAppFolder\\SmartSearch\\Smart\\Smart.Data\\Smart.Objects.csproj"
+              "C:\\PPAppFolder\\SmartApartmentDataAssessment\\Smart\\Smart.Data\\Smart.Objects.csproj": {
+                "projectPath": "C:\\PPAppFolder\\SmartApartmentDataAssessment\\Smart\\Smart.Data\\Smart.Objects.csproj"
               }
             }
           }
@@ -130,6 +134,10 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "Microsoft.Extensions.Logging": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
             "NEST": {
               "target": "Package",
               "version": "[7.1.0, )"
@@ -158,14 +166,14 @@
         }
       }
     },
-    "C:\\PPAppFolder\\SmartSearch\\Smart\\Smart.Data\\Smart.Objects.csproj": {
+    "C:\\PPAppFolder\\SmartApartmentDataAssessment\\Smart\\Smart.Data\\Smart.Objects.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\PPAppFolder\\SmartSearch\\Smart\\Smart.Data\\Smart.Objects.csproj",
+        "projectUniqueName": "C:\\PPAppFolder\\SmartApartmentDataAssessment\\Smart\\Smart.Data\\Smart.Objects.csproj",
         "projectName": "Smart.Objects",
-        "projectPath": "C:\\PPAppFolder\\SmartSearch\\Smart\\Smart.Data\\Smart.Objects.csproj",
+        "projectPath": "C:\\PPAppFolder\\SmartApartmentDataAssessment\\Smart\\Smart.Data\\Smart.Objects.csproj",
         "packagesPath": "C:\\Users\\abuchi.madumere\\.nuget\\packages\\",
-        "outputPath": "C:\\PPAppFolder\\SmartSearch\\Smart\\Smart.Data\\obj\\",
+        "outputPath": "C:\\PPAppFolder\\SmartApartmentDataAssessment\\Smart\\Smart.Data\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\abuchi.madumere\\AppData\\Roaming\\NuGet\\NuGet.Config",

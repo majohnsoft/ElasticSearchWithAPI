@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using Smart.Business.Interface;
+using Smart.Objects;
 using Smart.Objects.Model;
 using System;
 using System.Collections.Generic;
@@ -30,34 +31,23 @@ namespace Smart.API.Controllers
             _logger = logger;
         }
 
-        [HttpGet]
+        [HttpPost]
         [EnableCors("AllowOrigin")]
-        public async Task<IActionResult> SearchAsync(string keyword, List<string> market)
+        [ProducesResponseType(200)]
+        [ProducesResponseType(400)]
+        [Produces("application/json")]
+        public async Task<IActionResult> SearchAsync([FromBody] SearchRequestModel request)
         {
-            try
-            {
-                var mgmtIndexName = _configuration.GetValue<string>("AppSettings:ManagementIndexName");
-                var apartmentIndexName = _configuration.GetValue<string>("AppSettings:ApartmentIndexName");
-                var limit = _configuration.GetValue<int>("AppSettings:Limit");
-                var request = new SearchRequestModel()
-                {
-                    Keyword = keyword,
-                    IndexName = mgmtIndexName,
-                    Limit = limit,
-                    Market = market
-                };
-                var searchResponse = await _mgmtServices.SearchAsync(request);
-                request.IndexName = apartmentIndexName;
-                searchResponse.AddRange(await _propertiesServices.SearchAsync(request));
+            var mgmtIndexName = Constants.MANAGEMENTCOMPANYINDEXNAME;
+            var apartmentIndexName = Constants.APARTMENTINDEXNAME;
 
-                _logger.LogInformation($"Successful count {searchResponse.Count}");
-                return Ok(searchResponse);
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError(ex.Message);
-                return BadRequest(new List<string>());
-            }
+            request.IndexName = mgmtIndexName;
+            var searchResponse = await _mgmtServices.SearchAsync(request);
+            request.IndexName = apartmentIndexName;
+            searchResponse.AddRange(await _propertiesServices.SearchAsync(request));
+
+            _logger.LogInformation($"Successful count {searchResponse.Count}");
+            return Ok(searchResponse);
         }
 
     }

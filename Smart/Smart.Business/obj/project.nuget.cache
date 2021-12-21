@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "14+hc33A4wctuVfzjTjdN9NA1+2ZXveHySXTVbyy1cCb54WeXN4LhPFreesTzMuCGc/5ccJE7GeotPZFnpf2dA==",
+  "dgSpecHash": "8C8TK+IBfH3YiAsD0CVnc2eBTZwBd+AuD1WvX5gIm6oGw5tbNR84l2fUPRsA/4XWkdnCBYne7FKYF9qOKBtoAQ==",
   "success": true,
-  "projectFilePath": "C:\\PPAppFolder\\SmartSearch\\Smart\\Smart.Business\\Smart.Business.csproj",
+  "projectFilePath": "C:\\PPAppFolder\\SmartApartmentDataAssessment\\Smart\\Smart.Business\\Smart.Business.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\abuchi.madumere\\.nuget\\packages\\elasticsearch.net\\7.1.0\\elasticsearch.net.7.1.0.nupkg.sha512",
     "C:\\Users\\abuchi.madumere\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\6.0.0\\microsoft.extensions.dependencyinjection.6.0.0.nupkg.sha512",

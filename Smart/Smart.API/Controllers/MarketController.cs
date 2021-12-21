@@ -5,6 +5,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using Smart.Business.Interface;
 using Smart.Data.Model;
+using Smart.Objects;
 using Smart.Objects.Model;
 using System;
 using System.Collections.Generic;
@@ -33,18 +34,11 @@ namespace Smart.API.Controllers
         [EnableCors("AllowOrigin")]
         public async Task<IActionResult> GetDistinctMarket()
         {
-            try
-            {
-                var regionIndexName = _configuration.GetValue<string>("AppSettings:RegionIndexName");
-                var distinctMgmtMarket = await _regionServices.GetAllRegionAsync(regionIndexName);
-                _logger.LogInformation($"Successful count {distinctMgmtMarket.Count}");
-                return Ok(distinctMgmtMarket);
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError(ex.Message);
-                return BadRequest(new List<string>());
-            }
+            var regionIndexName = Constants.MARKETINDEXNAME;
+            var distinctMgmtMarket = await _regionServices.GetAllRegionAsync(regionIndexName);
+            _logger.LogInformation($"Successful count {distinctMgmtMarket.Count}");
+
+            return Ok(distinctMgmtMarket);
         }
     }
 }

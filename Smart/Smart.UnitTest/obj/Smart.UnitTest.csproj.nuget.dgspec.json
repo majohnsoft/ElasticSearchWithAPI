@@ -1,17 +1,89 @@
 {
   "format": 1,
   "restore": {
-    "C:\\PPAppFolder\\SmartSearch\\Smart\\Smart.UnitTest\\Smart.UnitTest.csproj": {}
+    "C:\\PPAppFolder\\SmartApartmentDataAssessment\\Smart\\Smart.UnitTest\\Smart.UnitTest.csproj": {}
   },
   "projects": {
-    "C:\\PPAppFolder\\SmartSearch\\Smart\\Smart.UnitTest\\Smart.UnitTest.csproj": {
+    "C:\\PPAppFolder\\SmartApartmentDataAssessment\\Smart\\Smart.Business\\Smart.Business.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\PPAppFolder\\SmartSearch\\Smart\\Smart.UnitTest\\Smart.UnitTest.csproj",
-        "projectName": "Smart.UnitTest",
-        "projectPath": "C:\\PPAppFolder\\SmartSearch\\Smart\\Smart.UnitTest\\Smart.UnitTest.csproj",
+        "projectUniqueName": "C:\\PPAppFolder\\SmartApartmentDataAssessment\\Smart\\Smart.Business\\Smart.Business.csproj",
+        "projectName": "Smart.Business",
+        "projectPath": "C:\\PPAppFolder\\SmartApartmentDataAssessment\\Smart\\Smart.Business\\Smart.Business.csproj",
         "packagesPath": "C:\\Users\\abuchi.madumere\\.nuget\\packages\\",
-        "outputPath": "C:\\PPAppFolder\\SmartSearch\\Smart\\Smart.UnitTest\\obj\\",
+        "outputPath": "C:\\PPAppFolder\\SmartApartmentDataAssessment\\Smart\\Smart.Business\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\abuchi.madumere\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\PPAppFolder\\SmartApartmentDataAssessment\\Smart\\Smart.Data\\Smart.Objects.csproj": {
+                "projectPath": "C:\\PPAppFolder\\SmartApartmentDataAssessment\\Smart\\Smart.Data\\Smart.Objects.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.Extensions.Logging": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "NEST": {
+              "target": "Package",
+              "version": "[7.1.0, )"
+            },
+            "NLog": {
+              "target": "Package",
+              "version": "[4.7.13, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\PPAppFolder\\SmartApartmentDataAssessment\\Smart\\Smart.Data\\Smart.Objects.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\PPAppFolder\\SmartApartmentDataAssessment\\Smart\\Smart.Data\\Smart.Objects.csproj",
+        "projectName": "Smart.Objects",
+        "projectPath": "C:\\PPAppFolder\\SmartApartmentDataAssessment\\Smart\\Smart.Data\\Smart.Objects.csproj",
+        "packagesPath": "C:\\Users\\abuchi.madumere\\.nuget\\packages\\",
+        "outputPath": "C:\\PPAppFolder\\SmartApartmentDataAssessment\\Smart\\Smart.Data\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\abuchi.madumere\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -39,10 +111,79 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\PPAppFolder\\SmartApartmentDataAssessment\\Smart\\Smart.UnitTest\\Smart.UnitTest.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\PPAppFolder\\SmartApartmentDataAssessment\\Smart\\Smart.UnitTest\\Smart.UnitTest.csproj",
+        "projectName": "Smart.UnitTest",
+        "projectPath": "C:\\PPAppFolder\\SmartApartmentDataAssessment\\Smart\\Smart.UnitTest\\Smart.UnitTest.csproj",
+        "packagesPath": "C:\\Users\\abuchi.madumere\\.nuget\\packages\\",
+        "outputPath": "C:\\PPAppFolder\\SmartApartmentDataAssessment\\Smart\\Smart.UnitTest\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\abuchi.madumere\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\PPAppFolder\\SmartApartmentDataAssessment\\Smart\\Smart.Business\\Smart.Business.csproj": {
+                "projectPath": "C:\\PPAppFolder\\SmartApartmentDataAssessment\\Smart\\Smart.Business\\Smart.Business.csproj"
+              },
+              "C:\\PPAppFolder\\SmartApartmentDataAssessment\\Smart\\Smart.Data\\Smart.Objects.csproj": {
+                "projectPath": "C:\\PPAppFolder\\SmartApartmentDataAssessment\\Smart\\Smart.Data\\Smart.Objects.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
           "dependencies": {
+            "Microsoft.Extensions.Logging": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
               "version": "[16.7.1, )"
+            },
+            "Moq": {
+              "target": "Package",
+              "version": "[4.16.1, )"
             },
             "coverlet.collector": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",

@@ -10,3 +10,14 @@ C:\PPAppFolder\SmartSearch\Smart\Smart.Data\obj\Debug\net5.0\Smart.Objects.dll
 C:\PPAppFolder\SmartSearch\Smart\Smart.Data\obj\Debug\net5.0\ref\Smart.Objects.dll
 C:\PPAppFolder\SmartSearch\Smart\Smart.Data\obj\Debug\net5.0\Smart.Objects.pdb
 C:\PPAppFolder\SmartSearch\Smart\Smart.Data\obj\Debug\net5.0\Smart.Objects.csprojAssemblyReference.cache
+C:\PPAppFolder\SmartApartmentDataAssessment\Smart\Smart.Data\bin\Debug\net5.0\Smart.Objects.deps.json
+C:\PPAppFolder\SmartApartmentDataAssessment\Smart\Smart.Data\bin\Debug\net5.0\Smart.Objects.dll
+C:\PPAppFolder\SmartApartmentDataAssessment\Smart\Smart.Data\bin\Debug\net5.0\ref\Smart.Objects.dll
+C:\PPAppFolder\SmartApartmentDataAssessment\Smart\Smart.Data\bin\Debug\net5.0\Smart.Objects.pdb
+C:\PPAppFolder\SmartApartmentDataAssessment\Smart\Smart.Data\obj\Debug\net5.0\Smart.Objects.GeneratedMSBuildEditorConfig.editorconfig
+C:\PPAppFolder\SmartApartmentDataAssessment\Smart\Smart.Data\obj\Debug\net5.0\Smart.Objects.AssemblyInfoInputs.cache
+C:\PPAppFolder\SmartApartmentDataAssessment\Smart\Smart.Data\obj\Debug\net5.0\Smart.Objects.AssemblyInfo.cs
+C:\PPAppFolder\SmartApartmentDataAssessment\Smart\Smart.Data\obj\Debug\net5.0\Smart.Objects.csproj.CoreCompileInputs.cache
+C:\PPAppFolder\SmartApartmentDataAssessment\Smart\Smart.Data\obj\Debug\net5.0\Smart.Objects.dll
+C:\PPAppFolder\SmartApartmentDataAssessment\Smart\Smart.Data\obj\Debug\net5.0\ref\Smart.Objects.dll
+C:\PPAppFolder\SmartApartmentDataAssessment\Smart\Smart.Data\obj\Debug\net5.0\Smart.Objects.pdb

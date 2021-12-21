@@ -11,6 +11,7 @@ using Smart.Business.Implementation;
 using Smart.Objects.Model;
 using System.Linq;
 using System.Text.RegularExpressions;
+using Microsoft.Extensions.Logging;
 
 namespace Autocomplete.Feed
 {
@@ -24,7 +25,7 @@ namespace Autocomplete.Feed
         static void Main(string[] args)
         {
             List<PropertyModel> properties = new List<PropertyModel>();
-            List<ManagementModel> managementCompanies = new List<ManagementModel>();
+            List<ManagementModel> managementCompanies = new List<ManagementModel>();;
 
             var connectionSettings = new ConnectionSettings(new Uri("https://search-apartment-5hhvuqjxeuwos2vgxnocvcw5vi.us-east-2.es.amazonaws.com/"))
                                     .BasicAuthentication("admin", "Lkjhgf#$321");
@@ -40,13 +41,13 @@ namespace Autocomplete.Feed
 
             IPropertyService propertiesService = new PropertyService(connectionSettings);
 
-            string productSuggestIndex = "apartmentproperty";
+            string apartmentSuggestIndex = Constants.APARTMENTINDEXNAME;
 
-            bool isCreated = propertiesService.CreateIndexAsync(productSuggestIndex).Result;
+            bool isCreated = propertiesService.CreateIndexAsync(apartmentSuggestIndex).Result;
 
             if (isCreated)
             {
-                propertiesService.AddManyAsync(productSuggestIndex, properties).Wait();
+                propertiesService.AddManyAsync(apartmentSuggestIndex, properties).Wait();
             }
             #endregion
 
@@ -61,7 +62,7 @@ namespace Autocomplete.Feed
 
             IManagementService mgmtService = new ManagementService(connectionSettings);
 
-            string mgmtSuggestIndex = "managementcompany";
+            string mgmtSuggestIndex = Constants.MANAGEMENTCOMPANYINDEXNAME;
 
             bool isMgmtCreated = mgmtService.CreateIndexAsync(mgmtSuggestIndex).Result;
 
@@ -93,7 +94,7 @@ namespace Autocomplete.Feed
 
             IMarketRegionService marketRegionService = new MarketRegionService(connectionSettings);
 
-            string marketRegionIndex = "marketregion";
+            string marketRegionIndex = Constants.MARKETINDEXNAME;
 
             bool isRegionCreated = marketRegionService.CreateIndexAsync(marketRegionIndex).Result;
             if (isRegionCreated)

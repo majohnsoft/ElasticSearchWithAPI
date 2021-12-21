@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\PPAppFolder\\SmartSearch\\Smart\\Smart.Data\\Smart.Objects.csproj": {}
+    "C:\\PPAppFolder\\SmartApartmentDataAssessment\\Smart\\Smart.Data\\Smart.Objects.csproj": {}
   },
   "projects": {
-    "C:\\PPAppFolder\\SmartSearch\\Smart\\Smart.Data\\Smart.Objects.csproj": {
+    "C:\\PPAppFolder\\SmartApartmentDataAssessment\\Smart\\Smart.Data\\Smart.Objects.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\PPAppFolder\\SmartSearch\\Smart\\Smart.Data\\Smart.Objects.csproj",
+        "projectUniqueName": "C:\\PPAppFolder\\SmartApartmentDataAssessment\\Smart\\Smart.Data\\Smart.Objects.csproj",
         "projectName": "Smart.Objects",
-        "projectPath": "C:\\PPAppFolder\\SmartSearch\\Smart\\Smart.Data\\Smart.Objects.csproj",
+        "projectPath": "C:\\PPAppFolder\\SmartApartmentDataAssessment\\Smart\\Smart.Data\\Smart.Objects.csproj",
         "packagesPath": "C:\\Users\\abuchi.madumere\\.nuget\\packages\\",
-        "outputPath": "C:\\PPAppFolder\\SmartSearch\\Smart\\Smart.Data\\obj\\",
+        "outputPath": "C:\\PPAppFolder\\SmartApartmentDataAssessment\\Smart\\Smart.Data\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\abuchi.madumere\\AppData\\Roaming\\NuGet\\NuGet.Config",
