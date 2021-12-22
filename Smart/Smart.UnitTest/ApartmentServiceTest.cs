@@ -27,7 +27,7 @@ namespace Smart.UnitTest
 
             string indexName = "";
             // Act
-            var isCreated = new PropertyService(esconnectionSettings).CreateIndexAsync(indexName).Result;
+            var isCreated = new PropertyServices(esconnectionSettings).CreateIndexAsync(indexName).Result;
             // Assert
             Assert.False(isCreated);
         }
@@ -48,9 +48,9 @@ namespace Smart.UnitTest
             };
 
             // Act
-            var result = new PropertyService(esconnectionSettings).SearchAsync(request).Result;
+            var result = new PropertyServices(esconnectionSettings).SearchAsync(request).Result;
             // Assert
-            Assert.True(result.Count > 0);
+            Assert.True(result.success);
         }
         [Fact]
         public void Search_With_Multiple_MarketScope()
@@ -59,20 +59,20 @@ namespace Smart.UnitTest
             var esconnectionSettings = new MockResponses().GetConnection();
             var markets = new List<string>();
            // markets.Add("savannah");
-           markets.Add("austin");
+           markets.Add("Austin");
            // markets.Add("houston");
             var request = new SearchRequestModel()
             {
-                Keyword = "Village",
+                Keyword = "Mission",
                 Market = markets,
                 IndexName = Constants.APARTMENTINDEXNAME,
                 Limit = 25
             };
 
             // Act
-            var result = new PropertyService(esconnectionSettings).SearchAsync(request).Result;
+            var result = new PropertyServices(esconnectionSettings).SearchAsync(request).Result;
             // Assert
-            Assert.True(result.Count > 0);
+            Assert.True(result.success);
         }
 
 
@@ -83,20 +83,20 @@ namespace Smart.UnitTest
             var esconnectionSettings = new MockResponses().GetConnection();
             var markets = new List<string>()
             {
-                "savannah"
+                "Austin"
             };
             var request = new SearchRequestModel()
             {
-                Keyword = "Village",
+                Keyword = "Cottages",
                 Market = markets,
                 IndexName = Constants.APARTMENTINDEXNAME,
                 Limit = 25
             };
 
             // Act
-            var result = new PropertyService(esconnectionSettings).SearchAsync(request).Result;
+            var result = new PropertyServices(esconnectionSettings).SearchAsync(request).Result;
             // Assert
-            Assert.True(result.Count > 0);
+            Assert.True(result.success);
         }
     }
 }

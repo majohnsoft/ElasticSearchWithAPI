@@ -2031,6 +2031,9 @@
       "Smart.Objects/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "NEST": "7.1.0"
+        },
         "compile": {
           "bin/placeholder/Smart.Objects.dll": {}
         },

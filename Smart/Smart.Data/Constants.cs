@@ -8,8 +8,8 @@ namespace Smart.Objects
 {
     public class Constants
     {
-        public const string APARTMENTINDEXNAME = "apartmentsindex";
-        public const string MANAGEMENTCOMPANYINDEXNAME = "managementcompaniesindex";
+        public const string APARTMENTINDEXNAME = "apartmentsindexname";
+        public const string MANAGEMENTCOMPANYINDEXNAME = "managementcompaniesindexname";
         public const string MARKETINDEXNAME = "marketregionsindex";
     }
 }

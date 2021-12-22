@@ -32,8 +32,8 @@ namespace Smart.API
         {
 
             services.AddControllers();
-            services.AddTransient<IManagementService, ManagementService>();
-            services.AddTransient<IPropertyService, PropertyService>(); 
+            services.AddTransient<IManagementServices, ManagementServices>();
+            services.AddTransient<IPropertyServices, PropertyServices>(); 
             services.AddTransient<IMarketRegionService, MarketRegionService>();
             services.AddSingleton(x => new ConnectionSettings(new Uri(Configuration.GetConnectionString("AWSURL")))
                             .BasicAuthentication("admin", "Lkjhgf#$321"));

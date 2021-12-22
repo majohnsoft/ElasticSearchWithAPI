@@ -5,10 +5,10 @@ using System.Threading.Tasks;
 
 namespace Smart.Business.Interface
 {
-    public interface IManagementService
+    public interface IPropertyServices
     {
-        Task AddManyAsync(string indexName, List<ManagementModel> properties);
+        Task AddManyAsync(string indexName, List<PropertyObj> properties);
         Task<bool> CreateIndexAsync(string indexName);
-        Task<List<SearchResponseModel>> SearchAsync(SearchRequestModel request);
+        Task<ApiResponse<List<SearchResponseModel>>> SearchAsync(SearchRequestModel request);
     }
 }

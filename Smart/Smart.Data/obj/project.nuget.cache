@@ -1,8 +1,24 @@
 {
   "version": 2,
-  "dgSpecHash": "cuMv3QxU5OB+4w2pfl8bLq6nVzRyMTss7icJPKCppFbNYbnyoI8hk/nps64yxfAah5SiqFYlXfTxNiNZpI7EoA==",
+  "dgSpecHash": "CNyBFhjhPjZy2kZpi6ZIt2yKEEMc4ooGKvA4H2DoZRHZoAxMKzteBh//yGV0nhF31Ya08d9BGjbEy+Y1Wj2j9Q==",
   "success": true,
   "projectFilePath": "C:\\PPAppFolder\\SmartApartmentDataAssessment\\Smart\\Smart.Data\\Smart.Objects.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\abuchi.madumere\\.nuget\\packages\\elasticsearch.net\\7.1.0\\elasticsearch.net.7.1.0.nupkg.sha512",
+    "C:\\Users\\abuchi.madumere\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\abuchi.madumere\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
+    "C:\\Users\\abuchi.madumere\\.nuget\\packages\\nest\\7.1.0\\nest.7.1.0.nupkg.sha512",
+    "C:\\Users\\abuchi.madumere\\.nuget\\packages\\system.buffers\\4.5.0\\system.buffers.4.5.0.nupkg.sha512",
+    "C:\\Users\\abuchi.madumere\\.nuget\\packages\\system.diagnostics.diagnosticsource\\4.5.1\\system.diagnostics.diagnosticsource.4.5.1.nupkg.sha512",
+    "C:\\Users\\abuchi.madumere\\.nuget\\packages\\system.io\\4.3.0\\system.io.4.3.0.nupkg.sha512",
+    "C:\\Users\\abuchi.madumere\\.nuget\\packages\\system.reflection\\4.3.0\\system.reflection.4.3.0.nupkg.sha512",
+    "C:\\Users\\abuchi.madumere\\.nuget\\packages\\system.reflection.emit\\4.3.0\\system.reflection.emit.4.3.0.nupkg.sha512",
+    "C:\\Users\\abuchi.madumere\\.nuget\\packages\\system.reflection.emit.ilgeneration\\4.3.0\\system.reflection.emit.ilgeneration.4.3.0.nupkg.sha512",
+    "C:\\Users\\abuchi.madumere\\.nuget\\packages\\system.reflection.emit.lightweight\\4.3.0\\system.reflection.emit.lightweight.4.3.0.nupkg.sha512",
+    "C:\\Users\\abuchi.madumere\\.nuget\\packages\\system.reflection.primitives\\4.3.0\\system.reflection.primitives.4.3.0.nupkg.sha512",
+    "C:\\Users\\abuchi.madumere\\.nuget\\packages\\system.runtime\\4.3.0\\system.runtime.4.3.0.nupkg.sha512",
+    "C:\\Users\\abuchi.madumere\\.nuget\\packages\\system.text.encoding\\4.3.0\\system.text.encoding.4.3.0.nupkg.sha512",
+    "C:\\Users\\abuchi.madumere\\.nuget\\packages\\system.threading.tasks\\4.3.0\\system.threading.tasks.4.3.0.nupkg.sha512"
+  ],
   "logs": []
 }

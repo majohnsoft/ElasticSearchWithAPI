@@ -13,7 +13,7 @@ using System.Linq;
 using System.Text.RegularExpressions;
 using Microsoft.Extensions.Logging;
 
-namespace Autocomplete.Feed
+namespace Smart.Seeds
 {
     class Program
     {
@@ -24,8 +24,8 @@ namespace Autocomplete.Feed
         }
         static void Main(string[] args)
         {
-            List<PropertyModel> properties = new List<PropertyModel>();
-            List<ManagementModel> managementCompanies = new List<ManagementModel>();;
+            List<PropertyObj> properties = new List<PropertyObj>();
+            List<ManagementObj> managementCompanies = new List<ManagementObj>();;
 
             var connectionSettings = new ConnectionSettings(new Uri("https://search-apartment-5hhvuqjxeuwos2vgxnocvcw5vi.us-east-2.es.amazonaws.com/"))
                                     .BasicAuthentication("admin", "Lkjhgf#$321");
@@ -34,12 +34,13 @@ namespace Autocomplete.Feed
             using (StreamReader r = File.OpenText("PropertieJson.txt"))
             {
                 string file = r.ReadToEnd();
-                properties = JsonConvert.DeserializeObject<List<PropertyModel>>(file);
-                properties.ForEach(s => s.property.market = ReplaceWhitespace(s.property.market));
-                properties.ForEach(s => s.property.state = ReplaceWhitespace(s.property.state));
+                var import = JsonConvert.DeserializeObject<List<ApartmentBuildingDTO>>(file);
+                properties = import.Select(s => new PropertyObj(s.property)).ToList();
+                properties.ForEach(s => s.market = ReplaceWhitespace(s.market));
+                properties.ForEach(s => s.state = ReplaceWhitespace(s.state));
             }
 
-            IPropertyService propertiesService = new PropertyService(connectionSettings);
+            IPropertyServices propertiesService = new PropertyServices(connectionSettings);
 
             string apartmentSuggestIndex = Constants.APARTMENTINDEXNAME;
 
@@ -55,12 +56,13 @@ namespace Autocomplete.Feed
             using (StreamReader r = File.OpenText("ManagementJson.txt"))
             {
                 string file = r.ReadToEnd();
-                managementCompanies = JsonConvert.DeserializeObject<List<ManagementModel>>(file);
-                properties.ForEach(s => s.property.market = ReplaceWhitespace(s.property.market));
-                properties.ForEach(s => s.property.state = ReplaceWhitespace(s.property.state));
+                var import = JsonConvert.DeserializeObject<List<ManagementDTO>>(file);
+                managementCompanies = import.Select(s=> new ManagementObj(s.mgmt)).ToList();
+                managementCompanies.ForEach(s => s.market = ReplaceWhitespace(s.market));
+                managementCompanies.ForEach(s => s.state = ReplaceWhitespace(s.state));
             }
 
-            IManagementService mgmtService = new ManagementService(connectionSettings);
+            IManagementServices mgmtService = new ManagementServices(connectionSettings);
 
             string mgmtSuggestIndex = Constants.MANAGEMENTCOMPANYINDEXNAME;
 
@@ -76,14 +78,14 @@ namespace Autocomplete.Feed
 
             var allMarkets = properties.Select(s => new MarketRegion()
             {
-                market = s.property.market,
-                state = s.property.state
+                market = s.market,
+                state = s.state
             }).ToList();
 
             allMarkets.AddRange(managementCompanies.Select(s => new MarketRegion()
             {
-                market = s.mgmt.market,
-                state = s.mgmt.state
+                market = s.market,
+                state = s.state
             }).ToList());
 
             var distinctMarket = allMarkets.GroupBy(g => new { g.market, g.state }).Select(s => new MarketRegion()

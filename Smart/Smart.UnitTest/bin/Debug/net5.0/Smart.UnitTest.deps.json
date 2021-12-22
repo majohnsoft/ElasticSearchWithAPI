@@ -1313,6 +1313,9 @@
         }
       },
       "Smart.Objects/1.0.0": {
+        "dependencies": {
+          "NEST": "7.1.0"
+        },
         "runtime": {
           "Smart.Objects.dll": {}
         }

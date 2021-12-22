@@ -17,12 +17,12 @@ namespace Smart.API.Controllers
     public class SearchController : Controller
     {
         // GET: SearchController
-        private readonly IManagementService _mgmtServices;
-        private readonly IPropertyService _propertiesServices;
+        private readonly IManagementServices _mgmtServices;
+        private readonly IPropertyServices _propertiesServices;
         private IConfiguration _configuration { get; }
         private ILogger<SearchController> _logger;
 
-        public SearchController(IManagementService mgmtServices, IPropertyService propertiesServices, IConfiguration configuration,
+        public SearchController(IManagementServices mgmtServices, IPropertyServices propertiesServices, IConfiguration configuration,
                         ILogger<SearchController> logger)
         {
             _mgmtServices = mgmtServices;
@@ -38,16 +38,31 @@ namespace Smart.API.Controllers
         [Produces("application/json")]
         public async Task<IActionResult> SearchAsync([FromBody] SearchRequestModel request)
         {
-            var mgmtIndexName = Constants.MANAGEMENTCOMPANYINDEXNAME;
-            var apartmentIndexName = Constants.APARTMENTINDEXNAME;
+            var propertyIndexName = Constants.APARTMENTINDEXNAME;
+            var managementIndexName = Constants.MANAGEMENTCOMPANYINDEXNAME;
 
-            request.IndexName = mgmtIndexName;
-            var searchResponse = await _mgmtServices.SearchAsync(request);
-            request.IndexName = apartmentIndexName;
-            searchResponse.AddRange(await _propertiesServices.SearchAsync(request));
+            request.IndexName = propertyIndexName;
+            var apartmentResponse = await _propertiesServices.SearchAsync(request);
 
-            _logger.LogInformation($"Successful count {searchResponse.Count}");
-            return Ok(searchResponse);
+            request.IndexName = managementIndexName;
+            var managementResponse = await _mgmtServices.SearchAsync(request);
+
+
+            var response = new ApiResponse<List<SearchResponseModel>>();
+            if (apartmentResponse.success && managementResponse.success)
+            {
+                response = apartmentResponse;
+                response.payload.AddRange(managementResponse.payload);
+            }
+            else if (apartmentResponse.success && !managementResponse.success)
+                response = apartmentResponse;
+            else if (!apartmentResponse.success && managementResponse.success)
+                response = managementResponse;
+            else
+                response = SearchResponseModel.FailedResponse<List<SearchResponseModel>>("No Search Result");
+
+            _logger.LogInformation($" is Successful {response.success}");
+            return Ok(response);
         }
 
     }

@@ -1,48 +1,107 @@
-﻿<!DOCTYPE html>
-<html lang="en">
+﻿<!doctype html>
+<html>
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Smart.Views</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta charset="utf-8">
+    <title>@ViewData["Title"] - Search</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.9.0/themes/smoothness/jquery-ui.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css" type="css">
+
+    <link rel="stylesheet" href="~/css/bootstrap.min.css" type="text/css" />
+    <script type="text/javascript" src="~/js/jquery-2.1.3.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script type="text/javascript" src="~/js/bootstrap-3.3.2.min.js"></script>
+
+    <!-- Include the plugin's CSS and JS: -->
+    <script type="text/javascript" src="~/js/bootstrap-multiselect.js"></script>
+    <link rel="stylesheet" href="~/css/bootstrap-multiselect.css" type="text/css" />
+    <link rel="stylesheet" href="~/css/main.css">
 </head>
+
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Smart.Views</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
     <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
+        @RenderBody()
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2021 - Smart.Views - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </div>
-    </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-    @await RenderSectionAsync("Scripts", required: false)
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.js"></script>
+
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var $select = $("#marketRegion").multiselect({
+                includeSelectAllOption: true,
+                enableFiltering: true
+            });
+            $select.multiselect('disable'); //disable it initially
+
+            $.ajax({
+                type: "GET",
+                url: "https://localhost:5363/api/market",
+                data: "{}",
+                success: function (data) {
+                    console.log(data);
+                    $('#marketRegion').multiselect('enable');
+                    $('#marketRegion').empty();
+                    if (data.length == 0) {
+                        $('#marketRegion').append("<option class='text-danger' value='0' disabled> No Projects under this Chief.</option> ");
+                        $('#marketRegion').append("<option class='text-danger' value='0' disabled> Enter the Project manually.</option> ");
+                    }
+                    else {
+                        var i;
+                        for (i = 0; i < data.length; i++) {
+                            var option = "<option value='" + data[i].market + "'>" + data[i].market + " </option>";
+                            $('#marketRegion').append(option);
+                        }
+                        $("#marketRegion").attr('multiple', 'multiple');
+                        $("#marketRegion").multiselect('rebuild');
+                    }
+                },
+                error: function () {
+                    alert("Error");
+                }
+            });
+        });
+
+        $(function () {
+            $("#keyword").autocomplete({
+                source: function (request, response) {
+                    var selected = [];
+                    $("#marketRegion :selected").each(function () {
+                        selected.push("\""+this.value+"\"");
+                    });
+                    console.log(selected);
+
+                    var postData = "{\"indexName\": \"\",\"keyword\": \"" + request.term.toLowerCase() + "\",\"limit\": 25," +
+                        "\"market\": [" + selected + "]}";
+                    
+                    console.log(postData);
+                    $.ajax({
+                        url: "https://localhost:5363/api/search",
+                        method: "POST",
+                        crossDomain: true,
+                        dataType: "JSON",
+                        contentType: "application/json; charset=utf-8",
+                        data: postData,
+
+                        success: function (data) {
+                            console.log(data);
+                            response($.map(data, function (item) {
+                                return {
+                                    label: item.name,
+                                    id: item.market
+                                }
+                            }));
+                        },
+                    });
+                },
+                minLength: 1
+            })
+        });
+    </script>
 </body>
 </html>

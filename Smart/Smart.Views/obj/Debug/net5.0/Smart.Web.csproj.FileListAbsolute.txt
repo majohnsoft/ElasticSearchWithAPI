@@ -9,7 +9,6 @@ C:\PPAppFolder\SmartApartmentDataAssessment\Smart\Smart.Views\bin\Debug\net5.0\r
 C:\PPAppFolder\SmartApartmentDataAssessment\Smart\Smart.Views\bin\Debug\net5.0\Smart.Web.pdb
 C:\PPAppFolder\SmartApartmentDataAssessment\Smart\Smart.Views\bin\Debug\net5.0\Smart.Web.Views.dll
 C:\PPAppFolder\SmartApartmentDataAssessment\Smart\Smart.Views\bin\Debug\net5.0\Smart.Web.Views.pdb
-C:\PPAppFolder\SmartApartmentDataAssessment\Smart\Smart.Views\obj\Debug\net5.0\Smart.Web.csprojAssemblyReference.cache
 C:\PPAppFolder\SmartApartmentDataAssessment\Smart\Smart.Views\obj\Debug\net5.0\Smart.Web.GeneratedMSBuildEditorConfig.editorconfig
 C:\PPAppFolder\SmartApartmentDataAssessment\Smart\Smart.Views\obj\Debug\net5.0\Smart.Web.AssemblyInfoInputs.cache
 C:\PPAppFolder\SmartApartmentDataAssessment\Smart\Smart.Views\obj\Debug\net5.0\Smart.Web.AssemblyInfo.cs
@@ -38,3 +37,4 @@ C:\PPAppFolder\SmartApartmentDataAssessment\Smart\Smart.Views\obj\Debug\net5.0\r
 C:\PPAppFolder\SmartApartmentDataAssessment\Smart\Smart.Views\obj\Debug\net5.0\Smart.Web.pdb
 C:\PPAppFolder\SmartApartmentDataAssessment\Smart\Smart.Views\obj\Debug\net5.0\Smart.Web.genruntimeconfig.cache
 C:\PPAppFolder\SmartApartmentDataAssessment\Smart\Smart.Views\obj\Debug\net5.0\Smart.Web.csproj.CopyComplete
+C:\PPAppFolder\SmartApartmentDataAssessment\Smart\Smart.Views\obj\Debug\net5.0\Smart.Web.csprojAssemblyReference.cache

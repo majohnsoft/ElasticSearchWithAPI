@@ -27,7 +27,7 @@ namespace Smart.UnitTest
 
             string indexName = "";
             // Act
-            var isCreated = new ManagementService(esconnectionSettings).CreateIndexAsync(indexName).Result;
+            var isCreated = new ManagementServices(esconnectionSettings).CreateIndexAsync(indexName).Result;
             // Assert
             Assert.False(isCreated);
         }
@@ -47,31 +47,31 @@ namespace Smart.UnitTest
             };
 
             // Act
-            var result = new ManagementService(esconnectionSettings).SearchAsync(request).Result;
+            var result = new ManagementServices(esconnectionSettings).SearchAsync(request).Result;
             // Assert
-            Assert.True(result.Count > 0);
+            Assert.True(result.success);
         }
+
         [Fact]
         public void Search_With_Multiple_MarketScope()
         {
             // Arrange
             var esconnectionSettings = new MockResponses().GetConnection();
             var markets = new List<string>();
-            markets.Add("savannah");
-            markets.Add("dfw");
-            markets.Add("houston");
+            markets.Add("SanFrancisco");
+            markets.Add("SanDiego");
             var request = new SearchRequestModel()
             {
-                Keyword = "MAA",
-                Market = null,
+                Keyword = "Privately",
+                Market = markets,
                 IndexName = Constants.MANAGEMENTCOMPANYINDEXNAME,
                 Limit = 25
             };
 
             // Act
-            var result = new ManagementService(esconnectionSettings).SearchAsync(request).Result;
+            var result = new ManagementServices(esconnectionSettings).SearchAsync(request).Result;
             // Assert
-            Assert.True(result.Count > 0);
+            Assert.True(result.success);
         }
 
 
@@ -82,20 +82,20 @@ namespace Smart.UnitTest
             var esconnectionSettings = new MockResponses().GetConnection();
             var markets = new List<string>()
             {
-                "savannah"
+                "SanFrancisco"
             };
             var request = new SearchRequestModel()
             {
-                Keyword = "MAA",
+                Keyword = "Privately",
                 Market = markets,
                 IndexName = Constants.MANAGEMENTCOMPANYINDEXNAME,
                 Limit = 25
             };
 
             // Act
-            var result = new ManagementService(esconnectionSettings).SearchAsync(request).Result;
+            var result = new ManagementServices(esconnectionSettings).SearchAsync(request).Result;
             // Assert
-            Assert.True(result.Count > 0);
+            Assert.True(result.success);
         }
     }
 }
