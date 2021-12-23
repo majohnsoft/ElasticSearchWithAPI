@@ -8,7 +8,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.9.0/themes/smoothness/jquery-ui.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css" type="css">
 
@@ -72,13 +71,13 @@
                 source: function (request, response) {
                     var selected = [];
                     $("#marketRegion :selected").each(function () {
-                        selected.push("\""+this.value+"\"");
+                        selected.push("\"" + this.value + "\"");
                     });
                     console.log(selected);
 
                     var postData = "{\"indexName\": \"\",\"keyword\": \"" + request.term.toLowerCase() + "\",\"limit\": 25," +
                         "\"market\": [" + selected + "]}";
-                    
+
                     console.log(postData);
                     $.ajax({
                         url: "https://localhost:5363/api/search",
@@ -89,12 +88,13 @@
                         data: postData,
 
                         success: function (data) {
-                            console.log(data);
-                            response($.map(data, function (item) {
+                            response($.map(data.payload, function (item) {
+                                console.log(item);
                                 return {
                                     label: item.name,
                                     id: item.market
                                 }
+                                // item[1].name
                             }));
                         },
                     });

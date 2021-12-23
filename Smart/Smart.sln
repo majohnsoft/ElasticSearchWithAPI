@@ -3,19 +3,24 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31205.134
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Smart.Objects", "Smart.Data\Smart.Objects.csproj", "{4B5B0207-C083-4B46-9A86-4CADA7A7DB23}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Smart.Objects", "Smart.Data\Smart.Objects.csproj", "{4B5B0207-C083-4B46-9A86-4CADA7A7DB23}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Smart.API", "Smart.API\Smart.API.csproj", "{6894A489-AAEF-4FDE-A929-BC380E8389E2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Smart.API", "Smart.API\Smart.API.csproj", "{6894A489-AAEF-4FDE-A929-BC380E8389E2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Smart.UnitTest", "Smart.UnitTest\Smart.UnitTest.csproj", "{B195A845-4724-4BA3-ABFE-32BE1F711B40}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Smart.UnitTest", "Smart.UnitTest\Smart.UnitTest.csproj", "{B195A845-4724-4BA3-ABFE-32BE1F711B40}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Smart.IntegrationTest", "Smart.IntegrationTest\Smart.IntegrationTest.csproj", "{D3528BA1-56C2-4B6B-A7DE-6161674CDFA5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Smart.IntegrationTest", "Smart.IntegrationTest\Smart.IntegrationTest.csproj", "{D3528BA1-56C2-4B6B-A7DE-6161674CDFA5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Smart.Web", "Smart.Views\Smart.Web.csproj", "{6EEB85C3-03D9-4CC5-941D-6BBE758E3689}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Smart.Web", "Smart.Views\Smart.Web.csproj", "{6EEB85C3-03D9-4CC5-941D-6BBE758E3689}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Smart.Business", "Smart.Business\Smart.Business.csproj", "{BDAC1CFD-7BAB-4BDA-8C7E-029FA9386BAC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Smart.Business", "Smart.Business\Smart.Business.csproj", "{BDAC1CFD-7BAB-4BDA-8C7E-029FA9386BAC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Smart.Seeds", "Smart.Seed\Smart.Seeds.csproj", "{1C67ED7D-66F3-473D-B18C-AA113CEFE71A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Smart.Seeds", "Smart.Seed\Smart.Seeds.csproj", "{1C67ED7D-66F3-473D-B18C-AA113CEFE71A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{78C8A991-A17C-4ACD-AC14-59C085A5C1C9}"
+	ProjectSection(SolutionItems) = preProject
+		Readme.txt = Readme.txt
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
