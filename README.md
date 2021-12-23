@@ -12,15 +12,15 @@ Link to my video explaining the implementation: https://johnsonmadumere.com/Uplo
 
 # IMPLEMENTATION
 I used the Layered Architecture Pattern also known as multi-layered or tiered architecture, or n-tier architecture was used. 
-This architecture pattern allows for easy communication and ease of undertanding. I classified it into 4 distinct layers
+This architecture pattern allows for easy communication and ease of understanding. I classified it into 4 distinct layers
 1. The Presentation Layer => smart.web
 2. The service Layer => smart.API
 3. The Business Layer => smart.business and smart.Object
 4. The Data Layer => smart.seed
 
-The Presentation layer speak on the customer or user experience and it calls the smart.API project to either get all market region or search for properties and management companies
+The Presentation layer speaks on the customer or user experience and it calls the smart.API project to either get all market regions or search for properties and management companies
 
-The Service layer: The api services such as get market region or search (auto-complete search) is done via the service layer. This communicate directly to the Business and Business Object Layer. The API makes use of HTTP POST Method for searching and Http GET Method for retrieving market regions
+The Service layer: The API services such as get market region or search (auto-complete search) is done via the service layer. This communicates directly to the Business and Business Object Layer. The API makes use of the HTTP POST Method for searching and the HTTP GET Method for retrieving market regions
 	
 	SAMPLE SEARCH REQUEST JSON
 	{
@@ -57,7 +57,7 @@ The Service layer: The api services such as get market region or search (auto-co
     NOTE: Swagger Localhost URL: https://localhost:5363/swagger/index.html
 
 The Business Layer: This is where the main implementation is done. It contains three classes namely, ManagementServices, MarketRegionService and PropertyServices class
-The Data Layer: This project handles the seeding creation of index and also uploading the data to AWS Elasticsearch cluster.
+The Data Layer: This project handles the seeding creation of the index and also uploads the data to the AWS Elasticsearch cluster.
 it to the respective index that was created
 
-Note: There is also a unit testing and integration testing to ensure the process/implementation are well tested using the scope that was defined.
+Note: There is also unit(xUNIT) testing and integration testing to ensure the process/implementation are well tested using the scope that was defined.
