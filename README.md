@@ -19,39 +19,41 @@ This architecture pattern allows for easy communication and ease of undertanding
 4. The Data Layer => smart.seed
 
 The Presentation layer speak on the customer or user experience and it calls the smart.API project to either get all market region or search for properties and management companies
-The Service layer: The api services such as get market region or search (auto-complete search) is done via the service layer. This communicate directly to the Business and Business Object Layer
-	SAMPLE SEARCH REQUEST JSON
-		{
-		  "indexName": "",
-		  "keyword": "Cottage",
-		  "limit": 50,
-		  "market": [
-			"Austin"
-		  ]
-		}
 
+The Service layer: The api services such as get market region or search (auto-complete search) is done via the service layer. This communicate directly to the Business and Business Object Layer. The API makes use of HTTP POST Method for searching and Http GET Method for retrieving market regions
+	
+	SAMPLE SEARCH REQUEST JSON
+	{
+	  "indexName": "",
+	  "keyword": "Cottage",
+	  "limit": 50,
+	  "market": [
+		"Austin"
+	  ]
+	}
+		
 	SAMPLE SEARCH RESPONSE JSON
 	{
-      "payload": [
-        {
-          "name": "Hillside Ranch at the Cottages",
-          "market": "Austin",
-          "state": "TX",
-          "isApartment": true,
-          "score": 6
-        },
-        {
-          "name": "Cottages at San Marcos",
-          "market": "Austin",
-          "state": "TX",
-          "isApartment": true,
-          "score": 6
-        },
-      ],
-      "success": true,
-      "description": "Successful",
-      "responseCode": 200
-    }
+	      "payload": [
+		{
+		  "name": "Hillside Ranch at the Cottages",
+		  "market": "Austin",
+		  "state": "TX",
+		  "isApartment": true,
+		  "score": 6
+		},
+		{
+		  "name": "Cottages at San Marcos",
+		  "market": "Austin",
+		  "state": "TX",
+		  "isApartment": true,
+		  "score": 6
+		},
+	      ],
+	      "success": true,
+	      "description": "Successful",
+	      "responseCode": 200
+        }
     NOTE: Swagger Localhost URL: https://localhost:5363/swagger/index.html
 
 The Business Layer: This is where the main implementation is done. It contains three classes namely, ManagementServices, MarketRegionService and PropertyServices class
